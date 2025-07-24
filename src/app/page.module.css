@@ -208,23 +208,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Custom scrollbar for better aesthetics */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
+/* Custom scrollbar for better aesthetics - globals.css'e taşındı */
 
 /* Responsive improvements */
 @media (max-width: 768px) {
