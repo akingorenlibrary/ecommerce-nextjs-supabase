@@ -1,0 +1,182 @@
+/* Genel container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  background: #fff;
+  color: #222;
+}
+
+/* Başlık */
+.title {
+  font-size: 24px;
+  margin: 42px 0 32px 0;
+  color: #222;
+}
+
+/* İçerik: mobilde tek sütun, büyük ekranda iki sütun */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+  }
+
+  .items {
+    flex: 2;
+  }
+
+  .summary {
+    flex: 1;
+    max-width: 300px;
+    height: fit-content;
+  }
+}
+
+/* Ürünler listesi */
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+}
+
+.item img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #f2f2f2;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+
+.info p {
+  margin: 4px 0;
+  color: #666;
+}
+
+/* Miktar butonları */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.controls button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #f9f9f9;
+}
+
+.controls span {
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Ürün kaldır butonu */
+.remove {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #999;
+  cursor: pointer;
+}
+
+.remove:hover {
+  color: #666;
+}
+
+/* Özet kutusu */
+.summary {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  color: #222;
+}
+
+.summary h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.summary p {
+  margin: 12px 0;
+}
+
+/* Butonlar */
+.btnPrimary {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-top: 8px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btnPrimary:hover {
+  background: #555;
+}
+
+.btnSecondary {
+  background: #f2f2f2;
+  color: #333;
+  border: none;
+  padding: 10px;
+  margin-top: 8px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btnSecondary:hover {
+  background: #e0e0e0;
+}
+
+/* Boş sepet durumu */
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #222;
+}

@@ -1,0 +1,96 @@
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 16px;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  padding: 50px;
+  font-size: 16px;
+  color: #dc3545;
+}
+
+.profileCard {
+  background: white;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.profileInfo {
+  margin-bottom: 30px;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoItem label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.infoItem span {
+  color: #666;
+  font-size: 14px;
+}
+
+.active {
+  color: #28a745 !important;
+  font-weight: 600;
+}
+
+.inactive {
+  color: #dc3545 !important;
+  font-weight: 600;
+}
+
+.actions {
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.logoutBtn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.logoutBtn:hover {
+  background: #c82333;
+} 

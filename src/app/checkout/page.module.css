@@ -1,0 +1,235 @@
+/* Genel container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  background: #fff;
+  color: #222;
+}
+
+/* Başlık */
+.title {
+  font-size: 24px;
+  margin: 42px 0 32px 0;
+  color: #222;
+}
+
+/* İçerik: mobilde tek sütun, büyük ekranda iki sütun */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+  }
+
+  .summary {
+    flex: 1;
+  }
+
+  .addressForm {
+    flex: 1;
+  }
+}
+
+/* Sipariş özeti */
+.summary {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  color: #222;
+}
+
+.summary h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.item img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #f2f2f2;
+}
+
+.itemInfo {
+  flex: 1;
+}
+
+.itemInfo h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #222;
+}
+
+.itemInfo p {
+  margin: 2px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.itemTotal {
+  font-weight: 600;
+  color: #222;
+  font-size: 14px;
+}
+
+.totalSection {
+  border-top: 1px solid #ddd;
+  padding-top: 16px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+}
+
+/* Adres formu */
+.addressForm {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  color: #222;
+}
+
+.addressForm h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.formRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+  .formRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.formGroup {
+  flex: 1;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #222;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(51, 51, 51, 0.1);
+}
+
+.readonlyInput {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.loggedInNote {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-weight: normal;
+  margin-left: 0.5rem;
+}
+
+.formGroup input:invalid {
+  border-color: #e74c3c;
+}
+
+/* Butonlar */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+@media (max-width: 767px) {
+  .actions {
+    flex-direction: column;
+  }
+}
+
+.btnPrimary, .btnSecondary {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnPrimary {
+  background: #333;
+  color: #fff;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background: #555;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background: #f2f2f2;
+  color: #333;
+}
+
+.btnSecondary:hover {
+  background: #e0e0e0;
+} 

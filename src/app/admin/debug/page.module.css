@@ -1,0 +1,22 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.content {
+  padding: 2rem 0;
+}
+
+.pageHeader {
+  margin-bottom: 2rem;
+}
+
+.pageHeader h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.pageHeader p {
+  color: #666;
+  margin: 0;
+} 

@@ -1,42 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --background: #ffffff;
   --foreground: #171717;
+  --background: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
     --foreground: #ededed;
+    --background: #0a0a0a;
   }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #ffffff !important;
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Multi-level dropdown functionality */
+.dropdown-submenu {
+  position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.dropdown-submenu > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+  min-width: 160px;
+  z-index: 1050;
+  display: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown:hover > .dropdown-menu,
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-submenu > a::after {
+  display: none;
+}
+
+/* Arrow styling */
+.dropdown-submenu > a .arrow {
+  color: #6c757d;
+  font-weight: bold;
+  float: right;
+  margin-top: 3px;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-submenu:hover > a .arrow {
+  color: #495057;
+}
+
+.dropdown-submenu:hover > a {
+  background-color: #e9ecef;
+  color: #16181b;
+}
+
+/* Ensure parent dropdown stays open */
+.dropdown-menu .dropdown-submenu:hover {
+  background-color: transparent;
+}
+
+/* Navbar Login Button Fix */
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active,
+.btn-outline-dark.active {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-dark:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Mobile Navbar Collapse Styles */
+.navbar-collapse.show {
+  display: block !important;
+}
+
+.navbar-collapse:not(.show) {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: white;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+  }
+  
+  .nav-item {
+    margin: 0.25rem 0;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 0 !important;
+    border-bottom: 1px solid #f8f9fa;
+  }
+  
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    border: none;
+    box-shadow: none;
+    background: #f8f9fa;
+    margin-left: 1rem;
+    display: none;
+  }
+  
+  .dropdown-menu.show {
+    display: block !important;
+  }
+  
+  .dropdown-submenu .dropdown-menu {
+    margin-left: 2rem;
+  }
+  
+  .navbar-toggler {
+    border: 1px solid #000;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Mobile/Touch specific styles */
+@media (max-width: 768px) {
+  /* Disable hover on mobile */
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: none;
+  }
+  
+  /* Style for mobile submenu toggle */
+  .dropdown-submenu > a {
+    position: relative;
+    padding-right: 40px !important;
+    cursor: pointer;
+  }
+  
+  .dropdown-submenu > a .arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #6c757d;
+    transition: transform 0.3s ease;
+  }
+  
+  /* When submenu is open on mobile */
+  .dropdown-submenu.mobile-open > a .arrow {
+    transform: translateY(-50%) rotate(90deg);
+  }
+  
+  .dropdown-submenu.mobile-open > .dropdown-menu {
+    position: static;
+    left: 0;
+    margin: 5px 0 0 0;
+    border-radius: 4px;
+    box-shadow: none;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    display: block;
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  
+  /* Better touch targets on mobile */
+  .dropdown-submenu > a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 }

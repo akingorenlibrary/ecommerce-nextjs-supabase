@@ -1,0 +1,430 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 2rem 0;
+}
+
+/* Page Header */
+.pageHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.pageSubtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Tracking Form */
+.trackingForm {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+}
+
+.formGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.trackingInput {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.trackingInput:focus {
+  outline: none;
+  border-color: #2c3e50;
+  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+}
+
+.trackButton {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.trackButton:hover:not(:disabled) {
+  background: #1a252f;
+  transform: translateY(-1px);
+}
+
+.trackButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid #f5c6cb;
+}
+
+/* Sample Numbers */
+.sampleNumbers {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+
+.sampleNumbers p {
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.sampleList {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sampleBtn {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  color: #6c757d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.sampleBtn:hover {
+  background: #e9ecef;
+  color: #2c3e50;
+}
+
+/* Tracking Results */
+.trackingResults {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Status Card */
+.statusCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+}
+
+.statusHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.trackingNumber {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.currentStatus {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Status Colors */
+.statusDelivered {
+  background: #d4edda;
+  color: #155724;
+}
+
+.statusInTransit {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.statusPending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.statusProblem {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.statusInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.infoLabel {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.infoValue {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Timeline */
+.timeline {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+}
+
+.timeline h3 {
+  margin: 0 0 2rem 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.timelineList {
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.timelineMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.markerDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #e9ecef;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #e9ecef;
+  z-index: 1;
+}
+
+.markerDot.current {
+  background: #2c3e50;
+  box-shadow: 0 0 0 2px #2c3e50;
+}
+
+.markerLine {
+  width: 2px;
+  background: #e9ecef;
+  flex: 1;
+  margin-top: 0.5rem;
+}
+
+.timelineContent {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.eventHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.eventStatus {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.eventTime {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.eventLocation {
+  color: #007bff;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.eventDescription {
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+/* Help Section */
+.helpSection {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+}
+
+.helpSection h3 {
+  margin: 0 0 1.5rem 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.helpOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.helpItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.helpItem strong {
+  color: #2c3e50;
+}
+
+.helpItem span {
+  color: #6c757d;
+}
+
+.liveChatBtn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.liveChatBtn:hover {
+  background: #218838;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .trackingForm {
+    margin: 0 1rem 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .formGroup {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .trackButton {
+    padding: 1rem;
+  }
+
+  .sampleNumbers {
+    margin: 0 1rem 3rem 1rem;
+  }
+
+  .sampleList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sampleBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .trackingResults {
+    margin: 0 1rem;
+  }
+
+  .statusCard, .timeline, .helpSection {
+    padding: 1.5rem;
+  }
+
+  .statusHeader {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .statusInfo {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .eventHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .helpItem {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .timelineItem {
+    gap: 0.75rem;
+  }
+
+  .timelineContent {
+    padding-bottom: 1.5rem;
+  }
+} 

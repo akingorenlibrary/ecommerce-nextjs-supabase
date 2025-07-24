@@ -1,0 +1,359 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Fix Bootstrap navbar mobile collapse */
+@media (max-width: 991px) {
+  :global(.navbar-collapse) {
+    background: #212529 !important;
+    margin: 0.5rem -1rem -1rem -1rem !important;
+    padding: 1rem !important;
+    border-radius: 0 0 0.375rem 0.375rem !important;
+  }
+  
+  :global(.navbar-dark .navbar-nav .nav-link) {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  :global(.navbar-dark .navbar-nav .nav-link:hover) {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 0.25rem !important;
+  }
+  
+  :global(.navbar-dark .navbar-nav .nav-link.active) {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 0.25rem !important;
+  }
+}
+
+:global(.navbar-dark .navbar-toggler) {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+:global(.navbar-dark .navbar-toggler-icon) {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.content {
+  padding: 2rem 0;
+}
+
+.pageHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.pageHeader h1 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.pageHeader p {
+  color: #6c757d;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Section */
+.section {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+  margin-bottom: 2rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader h2 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Table Container */
+.tableContainer {
+  overflow-x: auto;
+  min-width: unset;
+  width: 100%;
+}
+.tableContainer table {
+  min-width: 900px;
+}
+
+.tableContainer th {
+  background: #f8f9fa;
+  color: #2c3e50;
+  font-weight: 600;
+  border-top: none;
+  border-bottom: 2px solid #e9ecef;
+  padding: 1rem 0.75rem;
+}
+
+.tableContainer td {
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.tableContainer tbody tr:hover {
+  background: #f8f9fa;
+}
+
+/* Stats Cards */
+.statCard {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.statIcon {
+  font-size: 2.5rem;
+  background: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.statInfo h3 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.statInfo p {
+  color: #6c757d;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .pageHeader {
+    margin-bottom: 1.5rem;
+  }
+
+  .pageHeader h1 {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+  .statCard {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .statIcon {
+    font-size: 2rem;
+  }
+
+  .statInfo h3 {
+    font-size: 1.5rem;
+  }
+
+  .tableContainer th,
+  .tableContainer td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.85rem;
+  }
+} 
+
+@media (max-width: 600px) {
+  .modalBox {
+    min-width: 0;
+    max-width: 98vw;
+    width: 98vw;
+    padding: 18px 6px 18px 6px;
+    border-radius: 10px;
+  }
+  .modalTitle {
+    font-size: 1.1rem;
+  }
+  .modalDate {
+    font-size: 0.95rem;
+  }
+  .productListItem img {
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+  }
+  .productName, .productQty, .productPrice {
+    font-size: 0.97rem;
+  }
+} 
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(44, 62, 80, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modalBox {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+  padding: 32px 20px 28px 20px;
+  border: 1.5px solid #e9ecef;
+  min-width: 340px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  animation: modalPopIn 0.18s cubic-bezier(.4,2,.6,1) 1;
+}
+
+@keyframes modalPopIn {
+  0% { transform: scale(0.95) translateY(30px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.15s;
+}
+.closeBtn:hover {
+  color: #e74c3c;
+} 
+
+.modalTitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  letter-spacing: 0.01em;
+}
+
+.modalDate {
+  color: #888;
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.modalRow {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: #222;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.addressRow {
+  font-size: 1.04rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.totalRow {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-top: 12px;
+}
+
+.productList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.productListItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 1.01rem;
+}
+
+.productListItem img {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 8px;
+  border: 1px solid #eee;
+}
+
+.productName {
+  flex: 1;
+  font-weight: 500;
+  color: #222;
+}
+
+.productQty {
+  color: #555;
+  margin-left: 6px;
+  font-size: 1.01rem;
+}
+
+.productPrice {
+  color: #1a7e3c;
+  font-weight: 600;
+  margin-left: 10px;
+  font-size: 1.01rem;
+} 
